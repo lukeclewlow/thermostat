@@ -25,7 +25,7 @@ describe ("Thermostat", function() {
     });
 
     it("can be set to a minimum of 10", function() {
-      thermostat.decreaseTemperature(11);
+      thermostat.decreaseTemperature(1);
       expect(thermostat.temperature).toBeGreaterThan(9);
     });
 
