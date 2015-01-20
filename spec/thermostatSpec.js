@@ -9,21 +9,33 @@ describe ("Thermostat", function() {
   describe("by default", function() {
 
     it("starts at 20 degrees", function() {
-      expect(thermostat);
+      expect(thermostat.temperature).toEqual(20);
     });
   });
 
   describe("changing temperature", function() {
-    it("can incrase", function() {
-      thermostat.increaseTemperature();
-      expect(thermostat.temperature).toEqual
+    it("can increase", function() {
+      thermostat.increaseTemperature(2);
+      expect(thermostat.temperature).toEqual(22);
+    });
+
+    it("can decrease", function() {
+      thermostat.decreaseTemperature(2);
+      expect(thermostat.temperature).toEqual(18);
     });
 
   });
 
+  describe("you can change temperature", function() {
+    it ("by increasing it with the up button", function() {
+      thermostat.pressup();
+      expect(thermostat.temperature).toEqual(21);
+    });
+  });
+
 });
 
-// Thermostat starts at 20 degrees
+// DONE... Thermostat starts at 20 degrees DONE. 
 // You can increase the temp with the up button
 // You can decrease the temp with the down button
 // The minimum temperature is 10 degrees
