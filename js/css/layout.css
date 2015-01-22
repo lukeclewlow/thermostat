@@ -1,0 +1,70 @@
+@import url('normalize.css');
+/*@import url('grid.css');*/
+
+html {
+  background-color: white;
+}
+
+#temperature {
+  text-align: right;
+  font-size: 43;
+  margin-top: 5;
+  margin-bottom: 5;
+/*  color: yellow;*/
+}
+
+/*body {
+
+  color: yellow;
+}*/
+
+section {
+  border: 1px solid blue;
+  float: left;
+  padding: 0.5px;
+}
+
+.col-1 {
+  width: 59%;
+  height: 100%;
+  text-align: right;
+  vertical-align: center;
+
+}
+
+.col-2 {
+  width: 40%;
+  height: 100%;
+  background-color: black;
+  color: white;
+  vertical-align: text-top;
+  /*image degrees*/
+  /*image themometer*/
+}
+
+.PSM-on {
+  display: block;
+  text-align: right;
+}
+
+
+.test {
+  background-color: blue;
+}
+
+span { 
+  background-color: white;
+  padding: 3.5px;
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
+.yellow {
+  color: yellow;
+}
