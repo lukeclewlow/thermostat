@@ -1,36 +1,37 @@
 var thermostat = new Thermostat();
 
-$(document).ready(function() {
+  var changeTemp = function() { 
+    $('#temperature').text(thermostat.temperature);
+    $('h2, #temperature').attr('class', thermostat.tempDisplay());
+    $('h1, .colorbar').attr('id', thermostat.tempDisplay());
+  }
 
-  $('#temperature').text(thermostat.temperature);
+$(document).ready(function() {
+  changeTemp();
 
   $('.temperature-up').on('click', function() {
     thermostat.upButton();
-    $('#temperature').text(thermostat.temperature);
-    $('h2, #temperature').attr('class', thermostat.tempDisplay())
+    changeTemp();
   });
 
   $('.temperature-down').on('click', function() {
     thermostat.downButton();
-    $('#temperature').text(thermostat.temperature); 
-    $('h2, #temperature').attr('class', thermostat.tempDisplay())
+    changeTemp();
   });
 
   $('.reset').on('click', function() {
     thermostat.resetButton();
-    $('#temperature').text(thermostat.temperature);
-    $('h2, #temperature').attr('class', thermostat.tempDisplay())
+    changeTemp();
   });
 
   $('.PSM-on').on('click', function() {
     thermostat.switchPowerSaveModeOn();
+    changeTemp();
   });
 
   $('.PSM-off').on('click', function() {
     thermostat.switchPowerSaveModeOff();
+    changeTemp();
   });
-
-      // thermostat.tempDisplay();    
-  // });
 
 });

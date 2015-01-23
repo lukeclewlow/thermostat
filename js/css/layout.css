@@ -2,33 +2,42 @@
 /*@import url('grid.css');*/
 
 html {
-  background-color: white;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 #temperature {
   text-align: right;
-  font-size: 43;
+  font-size: 9em;
   margin-top: 5;
   margin-bottom: 5;
-/*  color: yellow;*/
 }
 
-/*body {
-
-  color: yellow;
-}*/
-
 section {
-  border: 1px solid blue;
   float: left;
   padding: 0.5px;
+}
+
+button {
+  font-size: 2em;
+  padding: .5em;
+  border: none;
+  background: none;
+}
+
+img {
+  height: 100%;
+  margin-left: -.5em;
 }
 
 .col-1 {
   width: 59%;
   height: 100%;
   text-align: right;
-  vertical-align: center;
+  padding-top: 10%;
 
 }
 
@@ -38,23 +47,14 @@ section {
   background-color: black;
   color: white;
   vertical-align: text-top;
-  /*image degrees*/
-  /*image themometer*/
 }
 
 .PSM-on {
-  display: block;
   text-align: right;
 }
 
-
-.test {
+#colorbar {
   background-color: blue;
-}
-
-span { 
-  background-color: white;
-  padding: 3.5px;
 }
 
 .green {
@@ -68,3 +68,22 @@ span {
 .yellow {
   color: yellow;
 }
+
+#green {
+  background-color: green;
+}
+
+#red {
+  background-color: red;
+}
+
+#yellow {
+  background-color: yellow;
+}
+
+span { 
+  background-color: white;
+  padding: 3.5px;
+  color: black;
+}
+
